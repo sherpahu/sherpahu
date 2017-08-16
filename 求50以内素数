@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int m,n;
+    for(m=2;m<=50;m++)
+    {
+        for(n=2;n<=m;n++)
+        {
+            if(m%n==0)//代表m能够被n整除,且n尽可能得小
+            {//此处括号可以不要
+                break;
+            }
+        }
+        if(m==n)//m=n代表m只能被1&m自身整除
+        {
+            printf("%d  ",m);
+        }
+        
+    }
+    return 0;
+}
