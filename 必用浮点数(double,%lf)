@@ -1,1 +1,2 @@
 1.乘方如pow(fabs(double x),double y);
+2.向上下取整ceil,floor;
