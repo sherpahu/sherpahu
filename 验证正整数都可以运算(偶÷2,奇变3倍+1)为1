@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+int n,count;
+scanf("%d\n",&n);
+if(n>1&&n<1000000000)
+{
+for(count=1;;count++)
+{
+    if(n%2==0) n /= 2;
+    else n=3*n+1;
+    if(n==1) break;
+}
+printf("%d\n",count);
+}
+else
+{
+    printf("%s\n","error");
+}
+
+
+return 0;
+}
