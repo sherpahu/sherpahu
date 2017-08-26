@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+int xiao[7],mu[7],c[7],i,j,max;//定义学校,妈妈安排的时间;j表示超过的星期
+
+for(i=0;i<7;i++)
+{
+    scanf("%d %d",&xiao[i],&mu[i]);
+
+    c[i]=xiao[i]+mu[i];
+}
+max=xiao[0]+mu[0];
+
+for(i=6;i>=0;i--)
+{
+
+    if(c[i]>=max)max=c[i];
+    else if(c[i]<max)max=max;
+}    
+for(i=6;i>=0;i--)
+    {
+            if(max>=8&&max==c[i])j=i;//找到津津不高兴的日期 
+            if(max<8)printf("%d\n",0);//若无不高兴日期，则输出0
+    }
+        printf("%d\n",j+1);
+
+
+return 0;
+}
