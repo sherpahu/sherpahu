@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int budget[12],i,ziji=0;
+    float mama;
+    for(i=0;i<12;i++)
+    {
+        scanf("%d\n",&budget[i]);
+    }
+    for(i=0;i<12;i++)
+    {
+        ziji=ziji%100+300;
+        if(ziji<budget[i])
+        {
+            mama=-1.0*(i+1.0)*1.0/1.2;
+            break;
+        }
+        else 
+        {
+            ziji-=budget[i];
+            if(i<=10)mama+=ziji/100*100;
+            else if(i=11)mama+=ziji/100*100/1.2;
+        }
+    }
+    printf("%g\n",mama*1.2);
+    
+    
+    return 0;
+}
