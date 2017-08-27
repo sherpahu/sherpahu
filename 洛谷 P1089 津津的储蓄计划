@@ -18,8 +18,8 @@ int main()
         else 
         {
             ziji-=budget[i];
-            if(i<=10)mama+=ziji/100*100;
-            else if(i=11)mama+=ziji/100*100/1.2;
+            mama+=ziji/100*100;
+            if(i==11)mama+=ziji%100/1.2;//12月最后的钱也要加上
         }
     }
     printf("%g\n",mama*1.2);
