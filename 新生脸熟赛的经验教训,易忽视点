@@ -1,0 +1,25 @@
+1.当数组数为待输入的未知数,则应该先输入未知数后在输入数组
+   #include <stdio.h>
+   int main()
+   {
+   int n,i;
+   scanf("%d",&n);
+   int a[n],b[n];
+   for(i=0;i<n;i++)
+      {
+      scanf("%d %d",&a[i],&b[i]);
+      printf("%d\n",a[i]-b[i]);
+      }
+   return 0;
+2.保留小数点后n位,一定注意加.符号
+   #include <stdio.h>
+   #include <math.h>
+   int main()
+   {
+   double x1,y1,x2,y2,s;
+   scanf("(%lf,%lf) (%lf,%lf)",&x1,&y1,&x2,&y2);
+   s=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+   printf("%.3lfm",s);
+   return 0;
+   }
+3.输出字符画时,反斜杠\和双引号"必须用\转义写为\\和\",需要在前面加\,有"%"之时写为%%转义
