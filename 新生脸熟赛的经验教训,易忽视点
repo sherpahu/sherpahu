@@ -23,3 +23,21 @@
    return 0;
    }
 3.输出字符画时,反斜杠\和双引号"必须用\转义写为\\和\",需要在前面加\,有"%"之时写为%%转义
+4.输入多组数据方法
+  a.当第一行输入了总数据数n时运用数组解决,见上面1.
+  b.当未知n时,运用while(scanf("%d\n",&n)!=EOF)对于数据进行录入
+#include <stdio.h>
+int main()
+{
+int hao,qian;
+while(scanf("%d\n",&hao)!=EOF)
+{
+qian=hao/100;
+if(qian<=39&&qian>=30||qian<17&&qian>=10)printf("bacon\n");
+else if(qian==17) printf("freshman\n");
+else printf("who?\n");
+
+}
+return 0;
+}
+  
