@@ -1,45 +1,27 @@
 #include <stdio.h>
+int getIndex(int arr[5],int value)
+{
+	int i;
+    int index;
+    for(i=0;i<5;i++)
+    {
+		if(arr[i]==value)
+		{
+		index=i;
+		break;
+		}
+		else index=-1;
+	}
+	return index;
+}
 int main()
 {
-    double arr[]={1.78, 1.77, 1.82, 1.79, 1.85, 1.75, 1.86, 1.77, 1.81, 1.80};
-    int i,j;
-    for(i=0;i<=9;i++)
-    {
-        if(i!=10)
-        {
-            printf("%.2lf, ",arr[i]);
-        }
-        else
-        {
-            printf("%.2lf",arr[i]);
-        }
-    }
-    printf("/n空格空格/n");
-    for(i=8;i>=0;i--)//********必须是8,10-1-1;***************
-    {
-        for(j=0;j<=i;J++)
-        {
-            
-            if(arr[j]>arr[j+1])
-            {
-                double temp;
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-                
-            }
-         }
-    }
-    for(i=0;i<=9;i++)
-    {
-        if(i!=10)
-        {
-            printf("%.2lf, ",arr[i]);
-        }
-        else
-        {
-            printf("%.2lf",arr[i]);
-        }
-    }
-    return 0;
+int arr[5]={3,12,9,8,6};
+int value=3,i;
+int indux=getIndex(arr,value);
+if(indux=-1) printf("%d bucunzai",value);
+else printf("%d cunzai,xuhaowei%d",value,i+1);
+
+
+return 0;
 }
