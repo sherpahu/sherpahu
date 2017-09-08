@@ -49,3 +49,24 @@ int main()
     }
     return 0;    
 }
+6.自创函数()之中需要int
+#include <stdio.h>
+int getIndex(int arr[5],int value)
+{
+    int i;
+    int index;
+    for(i=0;i<5;i++)
+    {
+       /* 请完善数组查询功能 */
+       if(arr[i]==value)       
+        {
+            index=i;
+            break;
+        }  
+       else index=-1;
+       
+       
+    }
+    return index;
+}
+
