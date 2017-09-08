@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main()
+{
+    double arr[]={1.78, 1.77, 1.82, 1.79, 1.85, 1.75, 1.86, 1.77, 1.81, 1.80};
+    int i,j;
+    for(i=0;i<=9;i++)
+    {
+        if(i!=10)
+        {
+            printf("%.2lf, ",arr[i]);
+        }
+        else
+        {
+            printf("%.2lf",arr[i]);
+        }
+    }
+    printf("/n空格空格/n");
+    for(i=8;i>=0;i--)
+    {
+        for(j=0;j<=i;J++)
+        {
+            
+            if(arr[j]>arr[j+1])
+            {
+                double temp;
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+                
+            }
+         }
+    }
+    for(i=0;i<=9;i++)
+    {
+        if(i!=10)
+        {
+            printf("%.2lf, ",arr[i]);
+        }
+        else
+        {
+            printf("%.2lf",arr[i]);
+        }
+    }
+    return 0;
+}
