@@ -19,7 +19,7 @@ int main()
     return 0;
 }
 4.赋值使用=,在条件语句等之中判断时用==
-5.数组引用之中不需要加[]
+5.数组引用之中不需要加[],但在定义等情况之下需要加[]
  #include <stdio.h>
 void replaceMax(int arr[],int value)
 {
@@ -42,7 +42,7 @@ int main()
     int arr1[] = {10,41,3,12,22};
     int arr2[] = {1,2,3,4,5};
     int i;
-    replaceMax(arr1 , arr2[0]  ); //将数组arr1和数组arr2的第一个元素传入函数中//   ***此处不需要加括号***
+    replaceMax(arr1 , arr2[0]  ); //将数组arr1和数组arr2的第一个元素传入函数中//   *********此处不需要加括号********
     for(i=0;i<5;i++)
     {
         printf("%d ",arr1[i]);                
