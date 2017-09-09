@@ -19,7 +19,7 @@ int main()
     return 0;
 }
 4.赋值使用=,在条件语句等之中判断时用==
-5.数组引用之中不需要加[],但在定义等情况之下需要加[]
+5.数组引用之中不需要加[],但在定义等情况之下需要加[]([]需要写具体值)
  #include <stdio.h>
 void replaceMax(int arr[],int value)
 {
@@ -69,4 +69,41 @@ int getIndex(int arr[5],int value)
     }
     return index;
 }
+7.定义多维数组用arr[n][m]={{},{},{}}时,可以不指明行n的大小,但必须指明列的大小
+ 而使用int arr[n][m];之时必须都指明
+       arr[0][0]= ;
+ 多维数组输出时需要可以引入一个函数将每行每列循环后输出
+ #include <stdio.h>
+void print(int arr[2][2])//************循环输出************
+{
+    int i,j;
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            printf("%d ",arr[i][j]);
+            
+            
+        }
+        
+        
+    }
+}
 
+
+int main()
+{
+    //使用第一种方式初始化方式声明并初始化二维数组arr
+    int arr1[2][2]={{10,20},{30,40}};
+    print(arr1);
+    printf("\n");
+    int arr2[2][2];
+    arr2[0][0]=10;
+    arr2[0][1]=20;
+    arr2[1][0]=30;
+    arr2[1][1]=40;
+    print(arr2);
+    //使用第二种方式初始化方式声明并初始化二维数组arr2
+    
+    return 0;    
+}
