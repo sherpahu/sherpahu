@@ -40,4 +40,31 @@ else printf("who?\n");
 }
 return 0;
 }
-  
+5.f题 付佬的括号匹配,???,不知为何WA
+#include <stdio.h> 
+#include <string.h>
+int main()
+{
+	int n,i,len,j=0;
+	scanf("%d\n",&n);
+	char str[n][1024],match[1024][1024];
+	for(i=0;i<n;i++)
+	{
+		gets(str[i]);
+		len=strlen(str[i]);
+		if(str[i][0]=='(' && str[i][len-1]==')' )  
+		{
+			strcpy(match[j],str[i]);
+			j++;
+		}
+	}
+	
+	
+	printf("%d\n",j);
+	for(i=0;i<j;i++)
+	{
+		printf("%s\n",match[i]);
+	}
+	printf("----------");
+	return 0;
+}
