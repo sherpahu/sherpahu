@@ -1,0 +1,18 @@
+#include <stdio.h>
+long long fibonacci(long long n)//函数递归求斐波拉契数列
+{
+
+	if(n<3) return 1;
+	else return fibonacci(n-2)+fibonacci(n-1);
+	
+}
+
+int main()
+{
+	long long n,num;
+	scanf("%I64d",&n);
+	num=fibonacci(n);
+	printf("%I64d\n",num);
+	return 0;
+ } 
+ //在Dev-c++和vc之中long long输入输出需要使用%I64d(大写的i),其余的如codeblocks之中可以使用%lld(小写的Ｌ)和%I64d，故最好都使用％I64d
