@@ -3,7 +3,7 @@ void erjin(unsigned long n);
 int main()
 {
     unsigned long num;
-    while (scanf("%lu",&num)==1)
+    while (scanf("%lu",&num)==1)//表示只要输入成功就进入循环
     {
         erjin(num);
     }
