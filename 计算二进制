@@ -1,0 +1,19 @@
+#include <stdio.h>
+void erjin(unsigned long n);
+int main()
+{
+    unsigned long num;
+    while (scanf("%lu",&num)==1)
+    {
+        erjin(num);
+    }
+    return 0;
+}
+void erjin(unsigned long n)
+{
+    int r;
+    r=n%2;
+    if(n>=2) erjin(n/2);
+    putchar(r==0?'0':'1');
+    
+}
