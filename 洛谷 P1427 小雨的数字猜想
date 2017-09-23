@@ -1,0 +1,19 @@
+一行内输入一串整数，以0结束，以空格间隔。
+一行内倒着输出这一串整数，以空格间隔。
+#include <stdio.h>
+int main()
+{
+	int a[100],i=0,n;
+	while (scanf("%d",&n)==1)//有输入就进入循环
+	{
+	if(n==0) break;
+	a[i]=n;
+	i++;
+	}
+	i-=1;
+	for(i;i>=0;i--)
+	{
+		printf("%d ",a[i]);
+	}
+	return 0;
+}
