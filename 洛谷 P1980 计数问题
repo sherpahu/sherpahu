@@ -32,7 +32,7 @@ P1047 校门外的树
 #include <stdio.h>
 int main()
 {
-	int l,m,i,j,a[10000],b[10000],zong[100000],sum=0;
+	int l,m,i,j,a[10000],b[10000],zong[100000],sum=0;//注意初始化
 	
 	
 	scanf("%d%d",&l,&m);
