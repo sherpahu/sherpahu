@@ -28,3 +28,34 @@ int main()
     
     return 0;
 }
+P1047 校门外的树
+#include <stdio.h>
+int main()
+{
+	int l,m,i,j,a[10000],b[10000],zong[100000],sum=0;
+	
+	
+	scanf("%d%d",&l,&m);
+	for(i=0;i<=l;i++)
+	{
+		zong[i]=1;
+	}
+	for(i=0;i<m;i++)
+	{
+	scanf("%d%d",&a[i],&b[i]);
+		
+		for(j=a[i];j<=b[i];j++)
+		{
+			zong[j]=0;
+		}
+	
+		
+	}	
+	for(i=0;i<=l;i++)
+	{
+		sum+=zong[i];
+	}
+	printf("%d",sum);
+	
+	return 0;
+ } 
