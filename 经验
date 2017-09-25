@@ -108,3 +108,6 @@ int main()
     return 0;    
 }
 8.保留整数前的0占位使用%0nd(n为需要保留的位数)
+9.printf()语句只要没有在""内部和单词中间断开就可以转行写
+  e.g.printf("type long double has a size of %zd bytes.\n",
+              sizeof(int)   );
