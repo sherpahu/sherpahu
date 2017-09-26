@@ -1,0 +1,91 @@
+#include <stdio.h>
+void calculator(char begin,double a,double b,char sym);
+int main()
+{
+	char begin;
+	double a,b;
+	char sym;
+	printf("please press y or n to begin or end\n");
+	scanf("%c",&begin);
+	printf("%s\n","please input two numbers");
+	scanf("%lf%c%lf",&a,&sym,&b);
+	calculator(begin,a,b,sym);
+	return 0;
+} 
+void calculator(char begin,double a,double b,char sym)
+{
+		
+	
+	
+	while(begin=='y'||begin=='Y')
+	{
+		
+		switch(sym)
+		{
+			case '+':
+				printf("%lf\n",a+b);
+				break;
+			case '-':
+				printf("%lf\n",a-b);
+				break;
+			case '*':
+				printf("%lf\n",a*b);
+				
+				break;
+			case '/':
+				if(b==0) printf("fenmubuweiling,please input your two numbers");
+				else printf("%lf\n",a/b);
+				
+				break;
+			default: printf("your input is wrong");
+		}
+	}
+	printf("%s\n","press y to continue");
+	scanf("%c",&begin);
+	#include <stdio.h>
+void calculator(char begin,double a,double b,char sym);
+int main()
+{
+	char begin;
+	double a,b;
+	char sym;
+	printf("please press y or n to begin or end\n");
+	scanf("%c",&begin);
+	printf("%s\n","please input two numbers");
+	scanf("%lf%c%lf",&a,&sym,&b);
+	calculator(begin,a,b,sym);
+	return 0;
+} 
+void calculator(char begin,double a,double b,char sym)
+{
+		
+	
+	
+	while(begin=='y'||begin=='Y')
+	{
+		
+		switch(sym)
+		{
+			case '+':
+				printf("%lf\n",a+b);
+				break;
+			case '-':
+				printf("%lf\n",a-b);
+				break;
+			case '*':
+				printf("%lf\n",a*b);
+				
+				break;
+			case '/':
+				if(b==0) printf("fenmubuweiling,please input your two numbers");
+				else printf("%lf\n",a/b);
+				
+				break;
+			default: printf("your input is wrong");
+		}
+	}
+  //输出程序未完成
+
+	
+	return;
+}
