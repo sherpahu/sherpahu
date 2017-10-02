@@ -23,12 +23,12 @@ int main()
 	if(mod==10)
 	{
 		if(d=='X') printf("Right");
-		else printf("%d-%.3d-%.5d-X",a,b,c);
+		else printf("%d-%.3d-%.5d-X",a,b,c);//保证位数,且用0补齐
 		
 	}
 	else
 	{
-		if(mod!=d-'0'+0) printf("%d-%.3d-%.5d-%d",a,b,c,mod);
+		if(mod!=d-'0'+0) printf("%d-%.3d-%.5d-%d",a,b,c,mod);//'0'-0将字符转换为数字
 		else printf("Right");
 	}
 	
