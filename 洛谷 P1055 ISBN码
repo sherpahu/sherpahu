@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,c,e,arr[10],i,sum=0,mod;
+	char d;
+
+	scanf("%d-%d-%d-%c",&a,&b,&c,&d);
+	e=c;
+	arr[0]=a;
+	arr[1]=b/100;
+	arr[2]=b/10-arr[1]*10;
+	arr[3]=b%10;
+	for(i=8;i>3;i--)
+	{
+		arr[i]=e%10;
+		e=e/10;
+	}
+	for(i=0;i<9;i++)
+	{
+		sum+=arr[i]*(i+1);
+	}
+	mod=sum%11;
+	if(mod==10)
+	{
+		if(d=='X') printf("Right");
+		else printf("%d-%.3d-%.5d-X",a,b,c);
+		
+	}
+	else
+	{
+		if(mod!=d-'0'+0) printf("%d-%.3d-%.5d-%d",a,b,c,mod);
+		else printf("Right");
+	}
+	
+	
+	
+	return 0;
+ } 
