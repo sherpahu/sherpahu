@@ -17,3 +17,18 @@ void delChar(char str[],char c)
         }
     }
 }
+以上算法效率低
+下面一种更加容易理解
+void delChar(char str[],char c)
+{
+    int i=0,j=0;
+    while(str[j])
+    {
+        if(str[j]==c)
+            j++;                //zhi jie tiao guo
+        else
+            str[i++]=str[j++]   //fu zhi
+    
+    }
+    s[j]='\0';
+}
